@@ -233,6 +233,7 @@ class BuildTimestampTask extends DefaultTask {
     public void writeFile() {
         new File(outputFile.parent).mkdirs()
         Properties props=new Properties()
+        props.put("projectName", project.name);
         props.put("version", project.version);
         props.put("buildTimestamp", new Date().format("yyyy-MM-dd HH:mm:ss z"));
         props.store(new FileOutputStream(outputFile),"Revision Properties")

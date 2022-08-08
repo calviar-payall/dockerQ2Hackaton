@@ -3,12 +3,8 @@ apply plugin: 'maven-publish'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-buildscript {
-    repositories { jcenter() }
-}
-
 group = 'org.jpos.template'
-version = '2.1.5'
+version = '2.1.8-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -19,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.jpos:jpos:2.1.5'
+    implementation 'org.jpos:jpos:2.1.8-SNAPSHOT'
 }
 
 apply from: 'jpos-app.gradle'
